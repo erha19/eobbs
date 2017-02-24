@@ -1,0 +1,31 @@
+<div>
+	<div class="wrap">
+		<div ui-view='' class='publish_issue dialog-animation' ></div> 
+		<div class="dashboard_tour">
+			<p class="tour_tip" data-ng-show="role==dashboard.user_roles.GUEST">EOAPI-让专业的接口管理变得更简单</p>
+			<ul data-ng-show="role!=dashboard.user_roles.GUEST">
+				<li><a ui-sref='user.issue'>我的帖子<span data-ng-bind="info.topicCount||''"></span></a></li>
+				<li><a ui-sref='user.reply'>我的回复<span data-ng-bind="info.commentCount||''"></span></a></li>
+				<li><a ui-sref='user.message'>消息通知<span data-ng-bind="info.unreadMsgNum||''"></span></a></li>
+			</ul>
+		</div>
+		<card-body>
+			<card 
+				ng-if="dashboard.loading=='close'"
+				ng-init="$last ? dashboard.emitRenderFinishedEvent() : angular.noop()" 
+				ng-repeat='issue in dashboard.issues track by $index' 
+				id='issue.topicID'
+				icon='issue.icon' title-content='issue.title' 
+				author='issue.userNickName' discuss='issue.commentCount' 
+				time='issue.updateTime'
+				drop='dashboard.delete(issue.topicID)'
+				toggle='role>=dashboard.user_roles.OWNER'
+			></card>
+			<eo-load show='dashboard.loading'></eo-load>
+		</card-body>
+		<div class="page">
+			<pager page-count="dashboard.page.page_count" current-page="dashboard.page.current_page" on-page-change="dashboard.onPageChange()"></pager>
+		</div>
+	</div>
+    <eo-footer position="fixed"></eo-footer>
+</div>

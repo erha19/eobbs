@@ -1,0 +1,13 @@
+<div class="eo-user">
+	<div class="wrap">
+		<div class="dashboard_tour">
+			<ul>
+				<li><a ui-sref='user.issue' ui-sref-active="active">我的帖子<span data-ng-bind="info.topicCount||'0'"></span></a></li>
+				<li><a ui-sref='user.reply' ui-sref-active="active">我的回复<span data-ng-bind="info.commentCount||'0'"></span></a></li>
+				<li><a ui-sref='user.message' ui-sref-active="active">消息通知<span data-ng-bind="info.unreadMsgNum||''"></span></a></li>
+			</ul>
+		</div>
+		<div ui-view=""></div>
+	</div>
+    <eo-footer position="fixed"></eo-footer>
+</div>

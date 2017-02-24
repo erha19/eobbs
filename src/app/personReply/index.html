@@ -1,0 +1,20 @@
+<div class="eo-reply">
+	<user-body>
+		<reply-searchbar></reply-searchbar>
+		<div class="person_reply_content">
+			<reply-card 
+				ng-init="$last ? personReply.emitRenderFinishedEvent() : angular.noop()" 
+				ng-repeat='comment in personReply.comments track by $index' 
+				id='comment.topicID'
+				topic-title='comment.title'
+				content='comment.content'
+				time='comment.updateTime'
+				drop="personReply.delete(comment.commentID)"
+			></reply-card>
+			<eo-load show='personReply.loading'></eo-load>
+		</div>
+	</user-body>
+	<div class="page">
+		<pager page-count="personReply.page.page_count" current-page="personReply.page.current_page" on-page-change="personReply.onPageChange()"></pager>
+	</div>
+</div>

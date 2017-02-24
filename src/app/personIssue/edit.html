@@ -1,0 +1,19 @@
+<div class="edit_wrap">
+	<div class="edit_editor_content">
+		<form class="edit_editor">
+			<input class="title" type="text" data-ng-model="updateIssue.title" placeholder="[必填]标题 请至少输入5个字">
+			<ul class="edit_module">
+				<li data-ng-repeat="board in edit.boardList track by $index" data-ng-class="{active:board.boardID==edit.topic.boardID}" ng-click="edit.selectBoard(board.boardID)"><a data-ng-bind="::board.boardName"></a></li>
+			</ul>
+			<rich-editor value='updateIssue.body' editor-height='300px'></rich-editor>
+			<label class="set_top" data-ng-if="role>=user_roles.OWNER">
+				<input type="checkbox" data-ng-model='updateIssue.isInTop' ng-true-value='1' ng-false-value='0'>
+				设为置顶
+			</label>
+			<div class="edit_buttons">
+                <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">取消</button>
+                <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="check()&&confirm(1)">修改</button>
+            </div>
+		</form>
+	</div>
+</div>

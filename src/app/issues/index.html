@@ -1,0 +1,35 @@
+<div>
+    <div class="issue_wrap">
+        <post-header 
+            description='issues.topic.title' 
+            author='issues.topic.userNickName' 
+            time='issues.topic.updateTime' 
+            discuss='issues.topic.commentCount'
+            drop='issues.deleteIssue(issues.topic.topicID)'
+            update='issues.updateIssue()'
+            is-chanageable='issues.topic.isChanageable'
+            >
+        </post-header>
+        <div class="post-content">
+            <div  data-ng-bind-html="issues.topic.body"></div>
+            <eo-load show='issues.contentLoading'></eo-load>
+        </div>
+        <comment-body>
+            <comment 
+                ng-repeat='comment in issues.comments track by $index' 
+                id="comment.commentID" 
+                drop="issues.deleteComment(comment.commentID)"
+                toggle="role>issues.user_roles.USER"
+                author='comment.userNickName' 
+                child-reply='comment.childReply' 
+                reply='comment.content' 
+                time='comment.updateTime'>
+            </comment>
+            <eo-load show='issues.commentLoading'></eo-load>
+        </comment-body>
+        <div class="page" ng-if="issues.comments.length>0">
+            <pager page-count="issues.page.page_count" current-page="issues.page.current_page" on-page-change="issues.onPageChange()"></pager>
+        </div>
+    </div>
+    <eo-footer></eo-footer>
+</div>

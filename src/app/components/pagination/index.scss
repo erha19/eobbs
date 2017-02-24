@@ -1,0 +1,44 @@
+.eo-pagination {
+  font-family: 'Microsoft YaHei';
+  font-size: 14px;
+  margin: 0 auto;
+  display:table;
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 6px 12px;
+      margin-right: 5px;
+      display: inline-block;
+      cursor: pointer;
+      color:#717171;
+      border-radius: 2px;
+      &:hover,&.active{
+        background-color: #717171;
+        color: #fff;
+      }
+      &.disable:hover{
+        background-color: rgba(0,0,0,0);
+        color: #e6e6e6;
+      }
+    }
+  }
+  input {
+    margin-left: 2px;
+    width: 30px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    vertical-align: 1px;
+    text-align: center;
+    padding: 6px 3px;
+  }
+  .pre,.next,.disable{
+    padding: 6px 7px;
+  }
+  .disable{
+    color:#e6e6e6;
+    cursor:default;
+  }
+}
+

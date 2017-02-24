@@ -1,0 +1,8 @@
+[
+	"bower_components/trix/dist/trix.css",
+	"bower_components/trix/dist/trix.js",
+	"bower_components/angular-qiniu-upload/src/qupload.js",
+	"bower_components/angular-local-storage/dist/angular-local-storage.js",
+	"bower_components/wangEditor/dist/js/wangEditor.min.js",
+	"bower_components/wangEditor/dist/css/wangEditor.min.css"
+]

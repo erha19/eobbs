@@ -1,0 +1,74 @@
+.message_card{
+	width:1140px;
+	box-sizing:border-box;
+	padding:10px 0;
+	margin:0 15px;
+	position:relative;
+	overflow:hidden;
+	
+	.message_open,.message_close{
+		font-size:16px;
+		float:right;
+		transition:transform .5s ease;
+		cursor:pointer;
+	}
+	.message_close{
+		transform:rotate(0deg);
+	}
+	.message_open{
+		transform:rotate(180deg);
+	}
+	.message_title{
+		font-size:16px;
+		font-weight:normal;
+		margin:0;
+		padding:0;
+		line-height:30px;
+		span{
+			display:inline-block;
+			width:1000px;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			display: inline-block;
+		}
+		&.active{
+			span{
+				color:#057e69;
+			}
+		}
+	}
+	.message_delete{
+		display:inline-block;
+		margin-right:10px;
+		color:#999;
+		float:right;
+		&:hover{
+			color:#c81414;
+		}
+	}
+	.message_content{
+		height:0;
+		margin:0;
+		overflow:hidden;
+	}
+	.content_open{
+		padding:10px 20px;
+		height:auto;
+	}
+	.message_from{
+		font-size:12px;
+		padding-bottom:10px;
+		color:#999;
+		.from{
+			display:inline-block;
+			width:900px;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			display: inline-block;
+		}
+	}
+	.message_time{
+		float:right;
+		font-style:normal;
+	}
+}

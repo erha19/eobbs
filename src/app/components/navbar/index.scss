@@ -1,0 +1,155 @@
+.navbar_wrap{
+    width:1170px;
+    margin:0 auto;
+    height:50px;
+    ul,li{
+        list-style:none;
+        padding:0;
+        display:block;
+    }
+    a{
+        cursor:pointer;
+        color:$defaultColor;
+        text-decoration:none;
+        &:active{
+            text-decoration:none;
+            color:#fff;
+        }
+    }
+    p{
+        margin:0;
+        padding:0;
+    }
+}
+.navbar_logo{
+    width:100px;
+    height:50px;
+    float:left;
+    background:url('//eobbs.oss-cn-shenzhen.aliyuncs.com/eoapi_sim.png') center center no-repeat;
+}
+.navbar_item{
+    margin-top:10px;
+    margin-left:20px;
+    float:left;
+
+    &>li{
+        float:left;
+        height:30px;
+    }
+    a{
+        padding: 0 10px;
+        height: 30px;
+        box-sizing:border-box;
+        line-height: 28px;
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+        -webkit-border-radius: 15px;
+        border-radius: 15px;
+        margin-right: 15px;
+        border: 1px solid rgba(0,0,0,0);
+        &:hover,&.active{
+            border: 1px solid #fff;
+        }
+    }
+}
+.navbar_operate{
+    float:right;
+    margin-top:10px;
+    a{
+        padding: 0;
+        width: 68px;
+        height: 30px;
+        box-sizing:border-box;
+        line-height: 30px;
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+        -webkit-border-radius: 15px;
+        border-radius: 15px;
+        margin-right: 5px;
+        border: 1px solid rgba(0,0,0,0);
+        &:active{
+            color:#fff;
+        }
+        &:hover{
+            border: 1px solid #fff;
+        }
+    }
+    .reg_log{
+        float:right;
+    }
+    .menu{
+        float:right;
+        position:relative;
+        z-index:8;
+        &:hover{
+            .menu_icon{
+                border:1px solid #f1f1f1;
+            }
+            dl{
+                display:block;
+            }
+        }
+        a{
+            border: 1px solid rgba(0,0,0,0);
+        }
+        dl{
+            display:none;
+            margin:0;
+            padding-top:10px;
+            position:absolute;
+            top:30px;
+            right:5px;
+            border-radius:3px;
+            box-sizing:border-box;
+            width:200px;
+            &:hover{
+                display:block;
+            }
+        }
+        dt,dd{
+            background-color:#fff;
+            width:100%;
+            margin:0;
+            border-left:1px solid #f1f1f1;
+            border-right:1px solid #f1f1f1;
+            box-sizing:border-box;
+            color:#666;
+        }
+        dt{
+            padding:8px 11px;
+            border-radius:3px 3px 0 0;
+            border-top:1px solid #f1f1f1;
+            border-bottom:1px solid #f1f1f1;
+            line-height:26px;
+            .nick_name{
+                font-size:16px;
+                font-weight:bold;
+            }
+            .user_name{
+                font-size:14px;
+            }
+        }
+        dd{
+            cursor:pointer;
+            line-height:43px;
+            height:43px;
+            text-indent:10px;
+            a{
+                display: block;
+                width: 100%;
+                line-height: 43px;
+                text-align: left;
+                color:#666;
+            }
+            &:hover{
+                background-color:#f0f0f0;
+            }
+            &:last-child{
+                border-radius:0 0 3px 3px;
+                border-bottom:1px solid #f1f1f1;
+            }
+        }
+    }
+}

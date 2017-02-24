@@ -1,0 +1,25 @@
+<div>
+	<div class="card">
+		<div class="card_icon">
+			<div class="text_icon"  ng-if="icon" >
+				<a class="iconfont" data-ng-class="icon">
+				</a>
+			</div>
+			<div class="text_icon" ng-if="!icon">
+				<a ng-bind="author.substr(1,2)=='随机'?author.substr(4,2):author.substr(0,2).toLocaleUpperCase()"></a>
+			</div>
+		</div>
+		<div class="card_content">
+			<p>
+			<span ng-bind="titleContent|htmlDecode" class="title" ui-sref='issues({id:{{id}}})'></span>
+			<span class="discuss">
+				<i class="iconfont icon-index-bubble"></i>
+				<span ng-bind="discuss"></span>
+			</span>
+			<span class="card_delete" ng-if="toggle" ng-click="drop()"><i class="iconfont icon-delete" title="删除"  ></i></span>
+			<span class="card_edit" ng-if="isChanageable" ng-click="update()"><i class="iconfont icon-write" title="编辑"  ></i></span>
+			</p>
+			<p><span class="author" ng-bind="author"></span><span class="time" am-time-ago="time"></span></p>
+		</div>
+	</div>
+</div>

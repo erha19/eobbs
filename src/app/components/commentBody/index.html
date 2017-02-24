@@ -1,0 +1,15 @@
+<div class="comment">
+    <div class="editor">
+        <div class="editor_header">
+            <i class="iconfont icon-index-bubble"></i>
+            我的回复
+        </div>
+        <div class="editor_box">
+            <rich-editor value="commentBody.content"></rich-editor>
+        </div>
+        <div class="editor_btn">
+            <a ng-click="commentBody.reply()" data-ng-class="{'active':commentBody.replaceHtmlTagExceptImg(commentBody.content)}">回复</a>
+        </div>
+    </div>
+    <div ng-transclude class="comment_detail"></div>
+</div>

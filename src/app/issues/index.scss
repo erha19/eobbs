@@ -1,0 +1,123 @@
+.post-content{
+	min-height:200px;
+	padding-top:20px;
+	font-size:16px;
+	position:relative;
+	img{
+		max-width: 100%;
+		display: block;
+	}
+}
+.issue_wrap{
+	width:900px;
+	margin:0 auto;
+}
+.ngdialog-content{
+	overflow:hidden;
+}
+.edit_wrap{
+	width:100%;
+	height:100%;
+}
+.ngdialog.ngdialog-theme-default{
+	padding-top:60px;
+}
+.ngdialog-content{
+	.edit_editor_content{
+		width:100%;
+	}
+	.edit_buttons{
+		margin-top:20px;
+	}
+	.edit_editor{
+		background-color:#fff;
+		border-radius:3px;
+		padding:8px 20px;
+		padding-bottom:20px;
+		position:relative;
+		.title{
+			line-height:31px;
+			font-size:14px;
+			padding:3px 9px;
+			width:100%;
+			margin-top:10px;
+			height:37px;
+			border-radius:3px;
+			border:1px solid #ccc;
+			box-sizing:border-box;
+			outline:none;
+		}
+		.set_top{
+			width:150px;
+			line-height:30px;
+			height:30px;
+			position:absolute;
+			text-align:center;
+			left:-15px;
+			bottom:-5px;
+			input{
+				width:16px;
+				height:16px;
+				background-color:#fff;
+				border:none;
+				display:inline-block;
+				vertical-align:middle;
+			}
+		}
+		.ng-invalid-minlength{
+			border-color:#de8181;
+		}
+		.edit_module{
+			margin-top:15px;
+			margin-left:0;
+			padding:0;
+			li{
+				margin-right:10px;
+				display:inline-block;
+				padding:10px 20px;
+				font-size:14px;
+				line-height:14px;
+				color:#666;
+				border:1px solid #ddd;
+				border-radius:3px;
+				cursor:pointer;
+				&:hover,&.active{
+					color:#fff;
+					border-color:#009684;
+					background-color:#009684;
+				}
+			}
+		}
+	}
+	.edit_operate{
+		margin-top: 10px;
+		height:35px;
+		width:100%;
+		.ensure_edit,.cancle_edit{
+			width:90px;
+			height:35px;
+			line-height:35px;
+			font-size:14px;
+			display:inline-block;
+			text-align:center;
+			border-radius:3px;
+			cursor:pointer;
+		}
+		.ensure_edit{
+			background-color:#85cdc4;
+			color:#fff;
+			cursor:default;
+			&.active{
+				cursor:pointer;
+				background-color:#009684;
+			}
+		}
+		.cancle_edit{
+			color:#666;
+			text-decoration:none;
+		}
+	}
+	trix-editor{
+		min-height:240px;
+	}
+}

@@ -1,0 +1,13 @@
+.eo-message{
+	.userbody_content{
+		padding-top:10px;
+	}
+	.message_card{
+		border-bottom:1px solid #ccc;
+	}
+	&:last-child{
+		.message_card{
+			border-bottom-width:0;
+		}
+	}
+}

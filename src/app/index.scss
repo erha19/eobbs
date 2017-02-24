@@ -1,0 +1,33 @@
+$defaultFontFamily:"Microsoft YaHei", "SimHei", "Arial Unicode MS";
+$defaultFontSize:14px;
+$defaultColor:#333;
+
+
+// injector
+@import "vendor.scss";
+@import "dashboard/index.scss";
+@import "common/base.scss";
+@import "issues/index.scss";
+@import "personIssue/index.scss";
+@import "person/index.scss";
+@import "personMessage/index.scss";
+@import "personReply/index.scss";
+@import "publish/index.scss";
+@import "components/animationFatory/index.scss";
+@import "components/card/index.scss";
+@import "components/cardBody/index.scss";
+@import "components/commentBody/index.scss";
+@import "components/eoContainer/index.scss";
+@import "components/comment/index.scss";
+@import "components/footer/index.scss";
+@import "components/loading/index.scss";
+@import "components/messageCard/index.scss";
+@import "components/navbar/index.scss";
+@import "components/pagination/index.scss";
+@import "components/postHeader/index.scss";
+@import "components/replyCard/index.scss";
+@import "components/replySearchbar/index.scss";
+@import "components/richEditor/index.scss";
+@import "components/searchbar/index.scss";
+@import "components/userBody/index.scss";
+// endinjector

@@ -1,0 +1,23 @@
+<div class="publish_wrap">
+	<div class="publish_mask"></div>
+	<div class="publish_editor_content">
+		<form class="publish_editor" name="publish_form">
+			<a ui-sref='dashboard' class="close">关闭</a>
+			<h1 class="label">发布帖子</h1>
+			<input class="title" type="text" name="title" data-ng-model="publish.topic.title"  ng-minlength="5" placeholder="[必填]标题 请至少输入5个字" required>
+			<ul class="publish_module">
+				<li data-ng-repeat="board in publish.boardList track by $index" data-ng-class="{active:board.boardID==publish.topic.boardID}" ng-click="publish.selectBoard(board.boardID)"><a data-ng-bind="::board.boardName"></a></li>
+			</ul>
+			<rich-editor value='publish.topic.body' editor-height='240px'></rich-editor>
+			<label class="set_top" data-ng-if="role>=publish.user_roles.OWNER">
+				<input type="checkbox" data-ng-model='publish.topic.isInTop' ng-true-value='1' ng-false-value='0'>
+				设为置顶
+			</label>
+			<div class="publish_operate">
+				<a class="ensure_publish" ng-show='!publish.publishState' data-ng-class="{'active':publish.topic.boardID&&publish_form.title.$valid&&publish.replaceHtmlTagExceptImg(publish.topic.body)}" ng-click="publish.publishTopic()">发布</a>
+				<a class="ensure_publish active" ng-show='publish.publishState'>正在发布...</a>
+				<a class="cancle_publish" ui-sref='dashboard'>取消</a>
+			</div>
+		</form>
+	</div>
+</div>

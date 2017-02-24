@@ -1,0 +1,15 @@
+<div>
+    <div class="issues_header">
+        <div class="title_line" data-ng-bind="title|htmlDecode"></div>
+        <div class="detail_line">
+            <span class="author" data-ng-bind="author"></span><span> | </span> <em am-time-ago="time"></em>
+        </div>
+        <div class="detail_line" ng-show="time">
+            <i class="iconfont icon-index-bubble"></i><em data-ng-bind="discuss||0"></em>
+        </div>
+        <div class="detail_line" data-ng-if="!!isChanageable">
+            <span class="operate_menu" data-ng-click="drop()"><i class="iconfont icon-delete"></i>删除</span>
+            <span class="operate_menu" data-ng-click="edit()"><i class="iconfont icon-write"></i>编辑</span>
+        </div>
+    </div>
+</div>

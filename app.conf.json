@@ -1,0 +1,26 @@
+{
+  "development": {
+    "ServerUrl": "",
+    "CookieName":"userToken",
+    "IsDebug":true,
+    "CookieConfig":{
+      "domain":"/"
+    }
+  },
+  "production": {
+    "ServerUrl": "",
+    "CookieName":"userToken",
+    "IsDebug":false,
+    "CookieConfig":{
+      "domain":"/"
+    }
+  },
+  "test": {
+    "ServerUrl": "http://localhost:8080",
+    "IsDebug":false,
+    "CookieName":"userToken",
+    "CookieConfig":{
+      "domain":"/"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div>
+	<div class="reply_card">
+		<div class="reply_card_content">
+			<p>
+				<span ng-bind="content" class="title" ui-sref='issues({id:{{id}}})'></span>
+				<span class="reply_delete"><i class="iconfont icon-delete" title="删除" ng-if="drop" ng-click="drop()"></i></span>
+			</p>
+			<p>
+				<em><<span ng-bind='::topicTitle'></span>></em>
+				<span class="time" ng-bind="time"></span>
+			</p>
+		</div>
+	</div>
+</div>

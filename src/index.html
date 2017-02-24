@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="eobbs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>EOAPI交流社区</title>
+    <meta name="description" content="eoapi论坛，eoapi是业内领先的Api接口管理及测试平台，为您提供最专业便捷的在线接口管理、测试、维护以及各类性能测试方案，帮助您高效开发、安全协作。">
+    <meta name="keywords" lang="en" content="eoapi,EOAPI">
+    <meta name="author" content="深圳波纹聚联网络科技有限公司">
+    <link rel="shortcut icon" type="image/ico" href="//eobbs.oss-cn-shenzhen.aliyuncs.com/favicon.ico"/>
+    <!-- Browser-360 speed mode is enabled (webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- Use IE and Chrome latest version -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+</head>
+
+    <!--[if lt IE 10]>
+    <![endif]-->
+
+<body data-ng-class="{'hiddenScroll':overflowHidden}">
+    <toast></toast>
+    <eo-container>
+        <eo-navbar></eo-navbar>
+        <div ui-view='' class='content' ></div> 
+    </eo-container>
+</body>
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <script src="app/vendor.js"></script>
+
+    <!-- inject:js -->
+    <!-- js files will be automatically insert here -->
+    <!-- endinject -->
+    
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</html>

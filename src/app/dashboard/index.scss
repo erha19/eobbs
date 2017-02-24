@@ -1,0 +1,75 @@
+.dashboard_tour{
+	width:850px;
+	overflow:hidden;
+	margin:0 auto 95px auto;
+	ul,li{
+        list-style:none;
+        padding:0;
+        display:block;
+    }
+    a{
+        cursor:pointer;
+        color:$defaultColor;
+        text-decoration:none;
+        &:active{
+            text-decoration:none;
+            color:$defaultColor;
+        }
+    }
+    p{
+        margin:0;
+        padding:0;
+    }
+	ul{
+		&>li{
+			width:138px;
+			height:37px;
+			line-height: 37px;
+			box-sizing:content-box;
+			text-align:center;
+			font-size:16px;
+			border:3px solid rgba(255,255,255,.4);
+			border-radius:3px;
+			float:left;
+			margin-left:100px;
+			border-radius:3px;
+			cursor:pointer;
+			transition:all .5s ease;
+			&:hover{
+				a{
+					color:#028f7d;
+					background-color:#fff;
+				}
+			}
+			a.active{
+				color:#028f7d;
+				background-color:#fff;
+			}
+		}
+		a{
+			color:#fff;
+			display:block;
+			span{
+				margin-left:8px;
+			}
+		}
+	}
+	.tour_tip{
+		width:100%;
+		text-align:center;
+		line-height:60px;
+		font-size:28px;
+		color:#fff;
+	}
+}
+.page{
+	margin-top:50px;
+	margin-bottom:70px;
+}
+.empry_tip{
+	height:100px;
+	line-height: 100px;
+	text-align:center;
+	font-size:18px;
+	color:#666;
+}

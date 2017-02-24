@@ -1,0 +1,56 @@
+.comment {
+    padding: 50px 0;
+    .comment_detail{
+        position:relative;
+        margin-top:10px;
+        min-height:100px;
+    }
+    .editor {
+        position: relative;
+        width: 100%;
+        box-sizing:border-box;
+        padding: 0 0 0 15px;
+        border-top: 1px solid #e0e0e0;
+        .rich_editor trix-editor{
+            min-height:100px;
+        }
+        .editor_header {
+            padding: 15px 0;
+            height: 31px;
+            line-height: 31px;
+            font-size: 16px;
+            color:#999;
+            i{
+                color:#047c67;
+                width:34px;
+                display:inline-block;
+                line-height:30px;
+                text-align:center;
+                font-size:24px;
+            }
+        }
+        .editor_box {
+            padding: 0 0 0 40px;
+        }
+        .editor_btn {
+            padding: 10px 0 10px 40px;
+            a {
+                display: block;
+                width: 70px;
+                height: 35px;
+                line-height: 37px;
+                text-align: center;
+                font-size: 14px;
+                border-radius: 3px;
+                z-index: 10;
+                background-color:#85cdc4;
+                color:#fff;
+                cursor:default;
+                &.active{
+                    cursor:pointer;
+                    background-color:#009684;
+                }
+            }
+        }
+    }
+}

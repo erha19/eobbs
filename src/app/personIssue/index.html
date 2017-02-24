@@ -1,0 +1,23 @@
+<div class="eo-issue">
+	<user-body>
+		<searchbar></searchbar>	
+		<div class="issue_content">
+			<card 
+				ng-init="$last ? personIssue.emitRenderFinishedEvent() : angular.noop()" 
+				ng-repeat='issue in personIssue.issues track by $index' 
+				id='issue.topicID'
+				icon='issue.icon' title-content='issue.title' 
+				author='issue.userNickName' discuss='issue.commentCount' 
+				time='issue.updateTime'
+				drop="personIssue.delete(issue.topicID)"
+				toggle='true'
+				update='personIssue.updateIssue(issue.topicID)'
+				is-chanageable='true'
+			></card>
+			<eo-load show='personIssue.loading'></eo-load>
+		</div>
+	</user-body>
+	<div class="page">
+		<pager page-count="personIssue.page.page_count" current-page="personIssue.page.current_page" on-page-change="personIssue.onPageChange()"></pager>
+	</div>
+</div>

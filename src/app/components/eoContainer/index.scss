@@ -1,0 +1,19 @@
+.container{
+    width:100%;
+    background-color:#fff;
+    position:relative;   
+    min-width:1170px; 
+    .container_mask{
+        position:absolute;
+        width:100%;
+        transition:height .1s ease;
+        top:0;
+        left:0;
+        z-index:10;
+        background: linear-gradient(#00a090,  #057b66);
+    }
+    .container_body{
+        position:relative;
+        z-index:20;
+    }
+}

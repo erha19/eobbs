@@ -1,0 +1,14 @@
+<div class="message_card">
+	<h1 class="message_title" data-ng-class="{'active':!read}">
+		<span data-ng-bind="::messageTitle" ></span>
+		<i class="iconfont icon-triangledownfill" ng-click="messageCard.toggleRead()" ng-class="{'message_open':messageCard.toggle,'message_close':!messageCard.toggle}"></i>
+	</h1>
+	<div class="message_content" data-ng-bind-html="::content" data-ng-class="{'content_open':messageCard.toggle}"></div>
+	<p class="message_from">
+		<a class="from" ui-sref='issues({id:from.topicID})' data-ng-bind="'帖子：'+from.title"></a>
+		<i class="message_time" data-ng-bind="::time"></i>
+		<a class="message_delete" data-ng-click="drop()">
+			<i class="iconfont icon-delete"></i>
+		</a>
+	</p>
+</div>

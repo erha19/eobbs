@@ -1,0 +1,26 @@
+<div class="navbar_wrap">
+    <a ui-sref='dashboard({boardID:999})' class="navbar_logo"></a>
+    <ul class="navbar_item">
+        <li data-ng-repeat="board in boardList track by $index"><a ui-sref='dashboard({boardID:board.boardID})' ui-sref-active='active' data-ng-bind="::board.boardName"></a></li>
+    </ul>
+    <div class="navbar_operate">
+        <div class="reg_log" ng-if="role==navbar.user_roles.GUEST">
+            <a href='{{"https://www.eoapi.cn/#/register/content?redirectUri="+navbar.redirect_uri}}' class="regitster">注册</a>
+            <a href='{{"https://www.eoapi.cn/#/login?redirectUri="+navbar.redirect_uri}}' class="login">登录</a>
+        </div>
+        <div class="menu" ng-if="role!=navbar.user_roles.GUEST">
+        	<a class="menu_icon"><i class="iconfont icon-list"></i></a>
+        	<dl>
+        		<dt>
+                    <div class="nick_name" data-ng-bind="info.userNickName||info.userPhoneNum"></div>      
+                    <div class="user_name" data-ng-bind="info.userName||info.userPhoneNum"></div>      
+                </dt>
+        		<dd><a ui-sref='user.issue'>我的帖子</a></dd>
+        		<dd><a ui-sref='user.reply'>我的回复</a></dd>
+                <dd><a ui-sref='user.message'>消息通知</a></dd>
+        		<dd><a href="https://www.eoapi.cn" target="_blank">EOAPI首页</a></dd>
+        		<dd data-ng-click="navbar.logout()"><a>退出登录</a></dd>
+        	</dl>
+        </div>
+    </div>
+</div>

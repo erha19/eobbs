@@ -1,0 +1,32 @@
+.userbody{
+	overflow:hidden;
+	border-radius:3px;
+	background-color:#f8f8f8;
+	border:1px solid #eaeaea;
+	box-shadow:0 10px 20px rgba(0,0,0,.05);
+	ul,li{
+        list-style:none;
+        padding:0;
+        display:block;
+    }
+    a{
+        cursor:pointer;
+        color:$defaultColor;
+        text-decoration:none;
+        &:active{
+            text-decoration:none;
+            color:$defaultColor;
+        }
+    }
+    p{
+        margin:0;
+        padding:0;
+    }
+	.userbody_content{
+        position:relative;
+        padding-bottom:10px;
+        min-height:80px;
+		background-color:#fff;
+		overflow:hidden;
+	}
+}

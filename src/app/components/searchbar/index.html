@@ -1,0 +1,11 @@
+<div class="searchbar">
+	<form name="search" data-ng-submit="searchbar.submitSearchTip($event)">
+		<a class="publish" ng-click='searchbar.publish()'>
+			我要发帖
+		</a>
+		<div class="search">
+			<input type="text" class="search" data-ng-model="searchbar.search_keyword" placeholder="搜索">
+			<button ng-click="searchbar.submitSearchTip()" class="iconfont icon-search"></button>
+		</div>
+	</form>
+</div>

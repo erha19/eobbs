@@ -1,0 +1,31 @@
+<div>
+    <div class="comment_box">
+        <div class="comment_icon">
+            <div class="text_icon">
+                <a ng-bind="author.substr(1,2)=='随机'?author.substr(4,2):author.substr(0,2).toLocaleUpperCase()"></a>
+            </div>
+        </div>
+        <div class="comment_content">
+            <div class="reporter">
+                <span class="author" data-ng-bind="author||'游客'"></span><span class="time" am-time-ago="time"></span>
+            </div>
+            <div class="reply_to" ng-if="childReply">
+                <div class="name">回应<span data-ng-bind="childReply.userName"></span>:</div>
+                <div class="reply" data-ng-bind-html="childReply.content"></div>
+            </div>
+            <div class="reply" data-ng-bind-html="reply"></div>
+
+            <div class="discuss" ng-show='!comment.replyStatus'>
+                <i class="iconfont icon-delete delete" title="删除" ng-if="toggle" ng-click="drop()"></i>
+                <span class="iconfont icon-pinglun" ng-click='comment.switchReplyStatus()'></span>
+            </div>
+            <div class="editor_box" ng-if='comment.replyStatus'>
+                <rich-editor value="comment.content"></rich-editor>
+                <div class="editor_btn">
+                <a class="commit" ng-click="comment.reply(id)" data-ng-class="{'active':comment.replaceHtmlTagExceptImg(comment.content)}">回复</a>
+                <a class="cancel" ng-click='comment.switchReplyStatus()'>取消</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="eo-message">
+	<user-body>
+		<message-card 
+				ng-init="$last ? personMessage.emitRenderFinishedEvent() : angular.noop()" 
+				ng-repeat='message in personMessage.messages track by $index' 
+				id='message.msgID'
+				message-title='message.summary' 
+				content='message.msg' 
+				from='message.otherMsg'
+				read='message.isRead'
+				time='message.msgSendTime'
+				drop='personMessage.delete(message.msgID)'
+
+		></message-card>
+		<eo-load show='personMessage.loading'></eo-load>
+	</user-body>
+	<div class="page">
+		<pager page-count="personMessage.page.page_count" current-page="personMessage.page.current_page" on-page-change="personMessage.onPageChange()"></pager>
+	</div>
+</div>
